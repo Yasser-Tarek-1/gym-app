@@ -1,13 +1,82 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: #3a1212;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0;
+} */
+
+body {
+  background-color: #fffafb;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.fitness-banner-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 600px;
+  top: 0px;
+  width: 600px;
+  height: 700px;
+}
+
+@media (max-width: 1009px) {
+  .fitness-banner-img {
+    display: none;
+  }
+}
+.swiper {
+  padding-bottom: 100px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff2625 !important;
+  position: absolute;
+}
+
+.swiper-button-next {
+  top: auto !important;
+  bottom: 30px !important;
+}
+.swiper-button-prev {
+  left: auto !important;
+  right: 60px !important;
+  top: auto !important;
+  bottom: 30px !important;
+}
+
+/* @media (max-width: 600px) {
+  :root {
+    --swiper-navigation-size: 400 !important;
+  }
+} */
+
+.exercise-card {
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  border-top: 3px solid #ff2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
 }
