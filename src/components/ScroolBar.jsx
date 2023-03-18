@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
 import ScroolBarCard from "./ScroolBarCard";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 

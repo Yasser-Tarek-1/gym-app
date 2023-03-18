@@ -11,14 +11,14 @@ const ExerciseCard = ({ bodyPart, equipment, gifUrl, name, target, id }) => {
           sx={{
             ml: "10px",
             color: "#fff",
-            backgroundColor: "#ff2625b3",
+            backgroundColor: "#f06d22",
             fontSize: "14px",
             borderRadius: "20px",
             textTransform: "capitalize",
             px: "12px",
             transition: "0.3s all ease-in-out",
             "&:hover": {
-              backgroundColor: "#ff2625b3",
+              backgroundColor: "#f06d22",
             },
           }}
         >

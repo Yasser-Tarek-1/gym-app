@@ -73,8 +73,8 @@ const FitnessSearch = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "#FF2625",
-            "&:hover": { backgroundColor: "#ED2120" },
+            backgroundColor: "#f06d22",
+            "&:hover": { backgroundColor: "#f06d22" },
           }}
           onClick={searchHandler}
         >

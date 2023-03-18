@@ -1,24 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
     <Stack
       direction="row"
       alignItems="center"
-      py="16px"
       justifyContent="flex-start"
+      sx={{
+        py: {
+          xs: "16px",
+          md: "22px",
+        },
+      }}
     >
       <Link to="/">
-        <img alt="Logo" src={Logo} />
+        <img alt="Logo" src={Logo} width={"90px"} />
       </Link>
-      <Stack direction="row" gap="30px" ml="50px" mt="15px">
+      <Stack direction="row" gap="30px" ml="50px">
         <Link
           to="/"
-          color="#FF2625"
-          style={{ color: "#FF2625", fontWeight: "700" }}
+          color="#f06d22"
+          style={{ color: "#f06d22", fontWeight: "700" }}
         >
           Home
         </Link>

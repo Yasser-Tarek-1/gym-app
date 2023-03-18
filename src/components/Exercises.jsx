@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Pagination, Box, Stack, Typography } from "@mui/material";
-import { fetchData, exerciseOptions } from "../services";
 import ExerciseCard from "./ExerciseCard";
+import Loader from "./Loader";
 
 const Exercises = () => {
   const { exercises } = useSelector((state) => state.exercises);
@@ -35,26 +35,32 @@ const Exercises = () => {
       >
         Showing Results
       </Typography>
-      <Stack
-        direction="row"
-        flexWrap="wrap"
-        justifyContent="center"
-        sx={{ gap: { lg: "110px", xs: "50px" } }}
-      >
-        {currentExercises.map((exercise) => {
-          return <ExerciseCard key={exercise.id} {...exercise} />;
-        })}
-      </Stack>
-      <Stack alignItems="center" mt="50px">
-        {exercises.length > currentLength && (
-          <Pagination
-            // size="large"
-            count={Math.ceil(exercises.length / currentLength)}
-            page={current}
-            onChange={paginationHandler}
-          />
-        )}
-      </Stack>
+      {exercises.length ? (
+        <>
+          <Stack
+            direction="row"
+            flexWrap="wrap"
+            justifyContent="center"
+            sx={{ gap: { lg: "110px", xs: "50px" } }}
+          >
+            {currentExercises.map((exercise) => {
+              return <ExerciseCard key={exercise.id} {...exercise} />;
+            })}
+          </Stack>
+          <Stack alignItems="center" mt="50px">
+            {exercises.length > currentLength && (
+              <Pagination
+                size="large"
+                count={Math.ceil(exercises.length / currentLength)}
+                page={current}
+                onChange={paginationHandler}
+              />
+            )}
+          </Stack>
+        </>
+      ) : (
+        <Loader />
+      )}
     </Box>
   );
 };

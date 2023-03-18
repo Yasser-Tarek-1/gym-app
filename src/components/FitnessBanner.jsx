@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography, Box, Button } from "@mui/material";
 
-import Banner from "../assets/images/banner.png";
+import Banner from "../assets/banner.png";
 
 const FitnessBanner = () => {
   return (
-    <Box sx={{}} mt="200px">
-      <Typography color="#FF2625" fontWeight="600" fontSize="24px">
+    <Box mt="200px">
+      <Typography color="#f06d22" fontWeight="600" fontSize="24px">
         Fitness Club
       </Typography>
       <Typography
@@ -27,8 +27,8 @@ const FitnessBanner = () => {
       <Button
         variant="contained"
         sx={{
-          backgroundColor: "#FF2625",
-          "&:hover": { backgroundColor: "#ED2120" },
+          backgroundColor: "#f06d22",
+          "&:hover": { backgroundColor: "#f06d22" },
         }}
         href="#exercises"
       >
@@ -36,7 +36,7 @@ const FitnessBanner = () => {
       </Button>
       <Typography
         fontWeight="600"
-        color="#FF2625"
+        color="#f06d22"
         sx={{
           opacity: "0.1",
           fontSize: {

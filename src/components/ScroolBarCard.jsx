@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Stack, Typography } from "@mui/material";
-import gymIcon from "../assets/icons/gym.png";
+import gymIcon from "../assets/gym.png";
 import { useDispatch } from "react-redux";
 import { fetchHandler } from "../services";
 
 const ScroolBarCard = ({ item }) => {
   const [selected, setSelected] = useState("all");
 
+  console.log(item === selected);
+
   const dispatch = useDispatch();
 
-  const cardSelectedHandler = () => {
-    setSelected(item);
+  const cardSelectedHandler = (e) => {
     fetchHandler(item, dispatch);
+    setSelected(item);
   };
 
-  // useEffect(() => {
-  //   fetchHandler(selected, dispatch);
-  // }, []);
+  useEffect(() => {
+    fetchHandler(selected, dispatch);
+  }, []);
 
   return (
     <Stack
@@ -43,17 +45,15 @@ const ScroolBarCard = ({ item }) => {
           lg: "250px",
           xl: "270px",
         },
-        borderTop: "2px solid ",
-
+        borderTop: "2px solid #fff",
         cursor: "pointer",
         transition: "all 0.3s",
         "&:hover": {
-          borderTop: "2px solid #FF2625",
+          borderTop: "2px solid #f06d22",
         },
-        borderTopColor: selected !== item ? "#FFF" : "#FF2625",
       }}
     >
-      <img src={gymIcon} alt="gymIcon" style={{ width: "40px" }} />
+      <img src={gymIcon} alt="gymIcon" style={{ width: "70px" }} />
       <Typography
         fontWeight="bold"
         fontSize="20px"

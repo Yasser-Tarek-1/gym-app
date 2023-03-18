@@ -1,16 +1,20 @@
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
+// import Error from "./components/Error";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Root = () => {
   return (
-    <Box px="16px" width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
-      <Navbar />
-      <Outlet />
+    <>
+      {/* <Error /> */}
+      <Container maxWidth={"xl"} m="auto">
+        <Navbar />
+        <Outlet />
+      </Container>
       <Footer />
-    </Box>
+    </>
   );
 };
 

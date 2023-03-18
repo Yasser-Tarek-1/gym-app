@@ -41,7 +41,7 @@ body {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ff2625 !important;
+  color: #f06d22 !important;
   position: absolute;
 }
 
@@ -66,7 +66,7 @@ body {
   width: 350px;
   height: 450px;
   background: #fff;
-  border-top: 3px solid #ff2625;
+  border-top: 3px solid #f06d22;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -79,4 +79,29 @@ body {
 
 .exercise-card img {
   height: 326px;
+}
+
+.detail-img {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 12px;
+  border-bottom: 3px solid #f06d22;
+  border-right: none;
+  padding-bottom: 30px;
+  background: #fff;
+}
+
+@media (min-width: 1199px) {
+  .detail-img {
+    border-right: 3px solid #f06d22;
+    border-bottom: none;
+  }
+}
+.detail-imgs {
+  background: #fcc757;
+  border-radius: 50%;
+  padding: 8px;
+  color: #f06d22;
+}
+
+img {
+  max-width: 100% !important;
 }
