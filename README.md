@@ -7,4 +7,4 @@
 A complete integrated website to take you from scratch to mastering the exercises, I used rapidapi to fetch data.
 used Redux ToolKit, React Router, Swiper and MUI for UI Design.
 
-click [here]() to visit a live demo.
+click [here](https://gym-exercise-app-1.netlify.app/) to visit a live demo.
